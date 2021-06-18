@@ -21,7 +21,7 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/$PROJECT_ID/myimage']
 # Deploy container image to Cloud Run
-- name: 'gcr.io/cloud-builders/gcloud'
+- name: 'gcr.io/cloud-builders/gcloud1'
   args: ['run', 'deploy', 'myservice', '--image', 'gcr.io/$PROJECT_ID/myimage', '--cluster', 'cluster-2', '--cluster-location', 'us-central1-c', '--platform', 'gke']
 images:
 - gcr.io/$PROJECT_ID/myimage
